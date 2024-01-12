@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
     dayType: type,
     advice: adv,
   });
-});
+});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
 //! how we pass data from our server to template file , using ejs 
 
 app.listen(port, () => {
