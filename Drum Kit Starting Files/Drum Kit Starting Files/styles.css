@@ -1,0 +1,88 @@
+body {
+  text-align: center;
+  background-color: #283149;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+
+}
+
+footer {
+  color: #DBEDF3;
+  font-family: sans-serif;
+}
+
+.w {
+  background-image: url(./images/crash.png);
+}
+
+.a {
+background-image: url(./images/kick.png);
+}
+ 
+.s {
+  background-image: url(./images/snare.png);
+}
+
+.d {
+  background-image: url(./images/tom1.png);
+}
+
+.j {
+  background-image: url(./images/tom2.png);
+}
+
+.k {
+  background-image: url(./images/tom3.png);
+}
+
+.l {
+  background-image: url(./images/tom4.png);
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+}
+/*!!Your CSS seems well-structured and formatted. You've applied styling to various elements, such as the background, header, buttons, and footer, which is great. The class names are descriptive, making i        t easy to understand their purpose.        
+A few suggestions:
+1. **Consistency in Naming:** Consider maintaining consistency in naming conventions across classes. For instance, you've used both `.game-over` and `.pressed` for different purposes. Ensuring a uniform naming convention can make your code more organized.
+2. **Button Styles:** The styling for the drum buttons is well-defined. However, you might want to adjust the `line-height` property to center the text vertically within the buttons more precisely, especially if the text varies in size or font.
+3. **Responsive Design:** If you intend this to be used across various devices, consider using media queries to make the layout responsive. This ensures a better user experience on different screen sizes.
+4. **Comments:** Adding comments in your CSS can help clarify the purpose of certain sections or classes, making it easier for someone else (or even yourself in the future) to understand the code.
+Overall, your CSS is nicely organized and styled. If you have any specific questions or need assistance with any JavaScript functionalities related to this drum kit, feel free to ask! */

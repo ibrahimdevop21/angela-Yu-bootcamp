@@ -1,0 +1,14 @@
+h1 {
+  color: red;
+}
+
+.boom {
+    font-size:2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.hiddenClass {
+    visibility: hidden;
+}
