@@ -27,7 +27,9 @@ Each project folder contains details, code, and any additional resources.
 - HTML
 - CSS
 - JavaScript
-- (Add other technologies used in your projects)
+- nodeJS
+- HTTP
+- EJS
 
 ## Setup
 1. Clone the repository: `git clone https://github.com/yourusername/web-dev-bootcamp.git`
