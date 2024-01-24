@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(/images/1_8H_6WlCAhba3mgUHXyyGEA.webp);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: whitesmoke;
+}
+
+form {
+  margin: 55px;
+  width: 60vh;
+  max-width: 700px;
+  min-width: 400px;
+}
+
+label {
+  color: #ffffff;
+}
+
+textarea,
+input {
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  color: darkgreen;
+  font-size: 1.2rem;
+}
+
+#submit {
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  background-color: salmon;
+}

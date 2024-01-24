@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<section id="main-content">
+  <h1 id="header">Tech Blog</h1>
+
+  <form action="/boom.js" method="post">
+    <label for="issue">What issues do you want to talk about?</label>
+    <input id="issue" type="text" name="issu" />
+
+    <label for="first-post">What's on your mind?</label>
+    <textarea name="post" id="first-post" cols="30" rows="10"></textarea>
+
+    <button type="submit" id="submit">SUBMIT</button>
+  </form>
+</section>
+
+<%- include("partials/footer.ejs") %>

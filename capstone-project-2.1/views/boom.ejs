@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+<section>
+  <% if(locals.issuValue && locals.postValue) { %>
+  <article>
+    <h2 id="issue"><%= issuValue %></h2>
+    <p id="poste"><%= postValue %></p>
+  </article>
+  <% } else{ %>
+  <h2>tell us what you have on you'r mind?</h2>
+  <% } %>
+</section>
+<%- include("partials/footer.ejs") %>
