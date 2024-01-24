@@ -1,3 +1,4 @@
+// TODO: 1.viewing the post, 2.editing the post 3.deleting the post
 import express from "express";
 import bodyParser from "body-parser";
 
