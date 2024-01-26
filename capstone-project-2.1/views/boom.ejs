@@ -2,8 +2,10 @@
 <section>
   <% if(locals.issuValue && locals.postValue) { %>
   <article>
-    <h2 id="issue"><%= issuValue %></h2>
-    <p id="poste"><%= postValue %></p>
+    <div id="issueTitle">
+      <h2 id="issue" class="border"><%= issuValue %></h2>
+    </div>
+    <div id="postBody"><p id="poste" class="border"><%= postValue %></p></div>
   </article>
   <% } else{ %>
   <h2>tell us what you have on you'r mind?</h2>
