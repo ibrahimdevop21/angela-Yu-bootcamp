@@ -1,4 +1,6 @@
 // TODO: 1.viewing the post, 2.editing the post 3.deleting the post
+//! this is not working im burning everything and starting from the 0
+// ! created anew branch named: node-capstone to deal with this blog im gone build it so that it's functional and maintainable
 import express from "express";
 import bodyParser from "body-parser";
 
