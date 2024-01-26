@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(/images/1_8H_6WlCAhba3mgUHXyyGEA.webp);
+  background-color: #179c4f;
 }
 
 h1 {
@@ -15,6 +15,7 @@ form {
   width: 60vh;
   max-width: 700px;
   min-width: 400px;
+  align-items: center;
 }
 
 label {
@@ -40,5 +41,26 @@ input {
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-  background-color: salmon;
+  background-color: #ffffff;
+}
+
+h2,
+p {
+  margin: 20px;
+  color: #ffffff;
+  border: 2p solid goldenrod;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+div .border {
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
