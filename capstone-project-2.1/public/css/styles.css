@@ -1,21 +1,97 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #179c4f;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #1bbd0c, #333);
+  animation: waveAnimation 5s infinite alternate;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+}
+
+section {
+  width: 48%;
+  padding: 20px;
+  /* border: 1px solid #ddd; */
+  position: relative;
+}
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.nav-link {
+  list-style: none;
+  font-size: 2rem;
+  display: inline;
+  margin-right: 50px; /* Adjusted from margin-left */
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0px 5px 5px 0px #1bbd0c;
 }
 
 h1 {
+  position: relative;
+  top: 450px;
   text-align: center;
-  font-size: 3rem;
-  color: whitesmoke;
+  font-size: 2rem;
+  color: #fff;
 }
 
+#bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 -5px 5px 0 #1bbd0c;
+}
+
+/* form {
+  position: relative;
+  to;
+  width: 100%;
+}
+
+#issue {
+  width: 100%;
+}
+#post-body {
+  width: 100%;
+} */
 form {
   margin: 55px;
   width: 60vh;
   max-width: 700px;
   min-width: 400px;
-  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
 }
 
 label {
@@ -41,26 +117,14 @@ input {
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-  background-color: #ffffff;
+  background-color: #fff;
+  width: 100px;
+  height: 40px;
+  font-size: 1.4rem;
 }
 
-h2,
-p {
-  margin: 20px;
-  color: #ffffff;
-  border: 2p solid goldenrod;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-
-div .border {
-  border: 2px solid goldenrod;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
 }

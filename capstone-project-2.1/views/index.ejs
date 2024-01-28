@@ -1,17 +1,14 @@
 <%- include("partials/header.ejs") %>
-
-<section id="main-content">
-  <h1 id="header">Tech Blog</h1>
-
-  <form action="/boom" method="post">
-    <label for="issue">What issues do you want to talk about?</label>
-    <input id="issue" type="text" name="issu" />
-
-    <label for="first-post">What's on your mind?</label>
-    <textarea name="post" id="first-post" cols="30" rows="10"></textarea>
-
-    <button type="submit" id="submit">SUBMIT</button>
+<section id="left-section">
+  <form action="/submit" method="post">
+    <label for="issue">Issue, title?</label>
+    <input id="issue" type="text" required />
+    <label for="post-body">What are the details of the issue?</label>
+    <textarea name="post-value" id="post-body" cols="30" rows="10" required>
+slj</textarea
+    >
+    <button id="submit" type="submit">Submit</button>
   </form>
 </section>
-
+<section id="right-section"></section>
 <%- include("partials/footer.ejs") %>
