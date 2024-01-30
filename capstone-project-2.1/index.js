@@ -18,13 +18,13 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-app.post("/submit", (req, res) => {
+app.post("/index", (req, res) => {
   const issueValue = req.body.issue;
   const postValue = req.body.post;
 
   console.log(`Issue: ${issueValue}, Post: ${postValue}`);
 
-  res.render("submit.ejs", { issueValue, postValue });
+  res.render("index.ejs", { issueValue, postValue });
 });
 
 app.use((err, req, res, next) => {

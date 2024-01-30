@@ -152,4 +152,7 @@ p {
 #view-area .issue-body {
   width: 100%;
   background-color: blue;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  width: 50%;
 }
