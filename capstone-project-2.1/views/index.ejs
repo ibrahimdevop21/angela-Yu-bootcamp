@@ -1,14 +1,26 @@
 <%- include("partials/header.ejs") %>
 <section id="left-section">
   <form action="/submit" method="post">
+    <h1>Linux mint 21.3 Virginia</h1>
+    <img id="cinamon" src="/images/thumb_cinnamon.png" alt="" />
+    <p>this is linux Mint 21.3, codename Virgignia</p>
+    <hr />
+    <p>
+      Linux Mint 21.3 is a long term support release which will be supported
+      until 2027. It comes with updated software and brings refinements and many
+      new features to make your desktop experience more comfortable.
+    </p>
     <label for="issue">Issue, title?</label>
-    <input id="issue" type="text" required />
+    <input id="issue" name="issue" type="text" required />
     <label for="post-body">What are the details of the issue?</label>
-    <textarea name="post-value" id="post-body" cols="30" rows="10" required>
-slj</textarea
-    >
+    <textarea id="post-body" cols="70" rows="8" name="post" required></textarea>
     <button id="submit" type="submit">Submit</button>
   </form>
 </section>
-<section id="right-section"></section>
+<section id="right-section">
+  <!-- <article id="view-area">
+    <h2 class="issue-title"></h2>
+    <p class="issue-body"></p>
+  </article> -->
+</section>
 <%- include("partials/footer.ejs") %>

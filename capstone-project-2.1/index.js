@@ -3,11 +3,11 @@ import bodyParser from "body-parser";
 import path from "path";
 
 const app = express();
-const port = 8000;
+const port = 3000;
 
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Use import.meta.url to get the current file's URL and extract the directory
 const __filename = new URL(import.meta.url).pathname;
 const __dirname = path.dirname(__filename);
 
@@ -16,6 +16,20 @@ app.set("views", path.join(__dirname, "views"));
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
+});
+
+app.post("/submit", (req, res) => {
+  const issueValue = req.body.issue;
+  const postValue = req.body.post;
+
+  console.log(`Issue: ${issueValue}, Post: ${postValue}`);
+
+  res.render("submit.ejs", { issueValue, postValue });
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something went wrong!");
 });
 
 app.listen(port, () => {

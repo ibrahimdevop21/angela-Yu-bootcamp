@@ -1,20 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: linear-gradient(to bottom, #1bbd0c, #333);
   animation: waveAnimation 5s infinite alternate;
   background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
+  -webkit-animation: waveAnimation 5s infinite alternate;
 }
 
 section {
   width: 48%;
   padding: 20px;
-  /* border: 1px solid #ddd; */
   position: relative;
 }
 @keyframes waveAnimation {
@@ -28,9 +36,9 @@ section {
 
 .nav-link {
   list-style: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: inline;
-  margin-right: 50px; /* Adjusted from margin-left */
+  margin-right: 50px;
 }
 
 a {
@@ -49,15 +57,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  box-shadow: 0px 5px 5px 0px #1bbd0c;
-}
-
-h1 {
-  position: relative;
-  top: 450px;
-  text-align: center;
-  font-size: 2rem;
-  color: #fff;
+  box-shadow: 0px 5px 5px 0px #cbddca;
 }
 
 #bottom-nav {
@@ -69,38 +69,38 @@ h1 {
   display: flex;
   justify-content: center;
   padding: 10px;
-  box-shadow: 0 -5px 5px 0 #1bbd0c;
+  box-shadow: 0 -5px 5px 0 #cbddca;
 }
 
-/* form {
+h1 {
+  font-size: 2rem;
   position: relative;
-  to;
-  width: 100%;
+  margin: 2px;
+  padding: 2px;
+  top: 2px;
 }
 
-#issue {
-  width: 100%;
-}
-#post-body {
-  width: 100%;
-} */
 form {
-  margin: 55px;
+  margin: 20px;
   width: 60vh;
   max-width: 700px;
   min-width: 400px;
   margin: 0 auto;
   position: relative;
-  top: 100px;
+  height: 100vh;
+  top: 30px;
+  /* bottom: 80px; Adjust the bottom spacing */
 }
 
 label {
   color: #ffffff;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
-
 textarea,
 input {
   margin-bottom: 10px;
+  margin-top: 10px;
   width: 100%;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -109,8 +109,13 @@ input {
   -o-border-radius: 15px;
   color: darkgreen;
   font-size: 1.2rem;
+  overflow: visible;
 }
 
+h2 {
+  text-align: center;
+  vertical-align: middle;
+}
 #submit {
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -119,12 +124,32 @@ input {
   -o-border-radius: 15px;
   background-color: #fff;
   width: 100px;
-  height: 40px;
+  height: 30px;
   font-size: 1.4rem;
+  padding: 0;
 }
 
-img {
+#img-id {
   width: 30px;
   height: 30px;
   vertical-align: middle;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#cinamon {
+  margin-left: -5px;
+  padding: 0;
+  width: 75%;
+  position: relative;
+  top: 10px;
+}
+
+#view-area .issue-title,
+#view-area .issue-body {
+  width: 100%;
+  background-color: blue;
 }
