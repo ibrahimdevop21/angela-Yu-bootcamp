@@ -19,20 +19,18 @@
 </section>
 <section id="right-section">
   <article id="view-area">
+    <% posts.forEach(post => { %>
     <div class="issue-title">
-      <% if (locals.issueValue) { %>
-      <h2><%= issueValue %></h2>
-      <% } else { %>
-      <h2>Thats Why We DRTFM!</h2>
-      <% } %>
+      <h2><%= post.issue %></h2>
+      <p>ID: <%= post.id %></p>
+      <!-- Add Edit and Delete buttons with links to corresponding routes -->
+      <a href="/edit/<%= post.id %>" class="edit-button">Edit</a>
+      <a href="/delete/<%= post.id %>" class="delete-button">Delete</a>
     </div>
     <div class="issue-body">
-      <% if (locals.postValue) { %>
-      <p><%= postValue %></p>
-      <% } else { %>
-      <p>Thats Why We DRTFM!</p>
-      <% } %>
+      <p><%= post.post %></p>
     </div>
+    <% }); %>
   </article>
 </section>
 <%- include("partials/footer.ejs") %>
