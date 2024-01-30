@@ -51,7 +51,6 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 30px;
   background-color: #333;
   display: flex;
   justify-content: center;
@@ -81,10 +80,10 @@ h1 {
 }
 
 form {
-  margin: 20px;
+  margin: 10px;
   width: 60vh;
-  max-width: 700px;
-  min-width: 400px;
+  max-width: 80%;
+  min-width: 40%;
   margin: 0 auto;
   position: relative;
   height: 100vh;
@@ -148,11 +147,33 @@ p {
   top: 10px;
 }
 
-#view-area .issue-title,
-#view-area .issue-body {
-  width: 100%;
-  background-color: blue;
+#right-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   margin-top: 50px;
-  margin-bottom: 25px;
-  width: 50%;
+}
+
+#view-aria {
+  border: 1px solid black;
+  width: 100%;
+  background-color: #333;
+  height: 100vh;
+}
+
+#view-area .issue-body,
+#view-area .issue-title {
+  background-color: #c9d1c8;
+  color: #000000;
+  padding: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  margin-bottom: 10px;
+  width: 60vh;
+  max-width: 60%;
+  min-width: 40%;
 }
