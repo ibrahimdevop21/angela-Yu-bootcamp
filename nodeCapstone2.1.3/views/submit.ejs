@@ -1,0 +1,39 @@
+<!-- submit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submitted Posts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav id="top-nav">
+      <ul>
+        <li class="nav-link"><a href="#main">Main</a></li>
+        <li class="nav-link"><a href="#post">Post's</a></li>
+      </ul>
+    </nav>
+    <img
+      src="/images/logo.png"
+      id="linux-logo"
+      alt="linux orginistion logo" />
+    <h1>Submitted Posts</h1>
+
+    <% posts.forEach(post => { %>
+      <div class="post-card">
+        <h2 class="ticket"><%= post.title %></h2>
+        <p class="ticket"><%= post.post %></p>
+      </div>
+    <% }); %>
+    <footer>
+      <nav id="bottom-nav">
+        <ul>
+          <li class="nav-link"><a href="#main">Main</a></li>
+          <li class="nav-link"><a href="posts">Post's</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="/index.js"></script>
+  </body>
+</html>

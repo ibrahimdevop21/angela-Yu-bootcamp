@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple node blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <nav id="top-nav">
+        <ul>
+          <li class="nav-link"><a href="#main">Main</a></li>
+          <li class="nav-link"><a href="#post">Post's</a></li>
+        </ul>
+      </nav>
+      <img
+        src="/images/logo.png"
+        id="linux-logo"
+        alt="linux orginistion logo" />
+      <form action="/submit" method="post">
+        <label for="blog-title">Blog Title:</label>
+        <input type="text" id="blog-title" name="issueTitle" required />
+
+        <label for="issue-post">Share your blog content:</label>
+        <textarea
+          name="issuePost"
+          id="issue-post"
+          cols="30"
+          rows="17"
+          placeholder=" don't forget to include info about your Linux Distro, and version:"
+          required></textarea>
+
+        <button class="fun-button" type="submit">SUBMIT</button>
+      </form>
+    </main>
+    <footer>
+      <nav id="bottom-nav">
+        <ul>
+          <li class="nav-link"><a href="#main">Main</a></li>
+          <li class="nav-link"><a href="posts">Post's</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="/index.js"></script>
+  </body>
+</html>
