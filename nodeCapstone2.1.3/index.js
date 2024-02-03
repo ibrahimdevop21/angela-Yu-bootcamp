@@ -1,5 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
+import { randomBytes } from "crypto";
 
 const app = express();
 const port = 3000;
@@ -14,29 +15,34 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-app.post("/submit", (req, res) => {
-  const title = req.body.issueTitle;
-  const post = req.body.issuePost
+function generateId() {
+  const randomBytesStr = randomBytes(4).toString("hex");
+  const base36Id = parseInt(randomBytesStr, 16).toString(36);
+  return base36Id.padEnd(9, "0").substr(0, 9);
+}
 
+//!submit page and creating the post function
+app.post("/submit", (req, res) => {
+  const issTitle = req.body.issueTitle;
+  const issPost = req.body.issuePost;
   const postId = generateId();
-  
+
   const newPost = {
     id: postId,
-    issue: title,
-    post: post,
-  }
+    issue: issTitle,
+    post: issPost,
+  };
 
   posts.push(newPost);
 
-  console.log(`New Post created with ID ${postId}, title: ${title}, post: ${post}`);
+  console.log(
+    `New Post created with ID ${postId}, title: ${issTitle}, post: ${issPost}`
+  );
 
-  res.render("submit", {posts}); 
-})
+  res.render("submit", { posts });
+});
 
-function generateId() {
-  return Math.floor(Math.random() * 1000000).toString(36).substr(2, 9);
-}
-
+//start the server
 app.listen(port, () => {
   console.log(`server is up and running on port: ${port}`);
 });

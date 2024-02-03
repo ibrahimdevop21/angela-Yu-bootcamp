@@ -14,17 +14,14 @@
         <li class="nav-link"><a href="#post">Post's</a></li>
       </ul>
     </nav>
-    <img
-      src="/images/logo.png"
-      id="linux-logo"
-      alt="linux orginistion logo" />
+    <img src="/images/logo.png" id="linux-logo" alt="linux orginistion logo" />
     <h1>Submitted Posts</h1>
 
     <% posts.forEach(post => { %>
-      <div class="post-card">
-        <h2 class="ticket"><%= post.title %></h2>
-        <p class="ticket"><%= post.post %></p>
-      </div>
+    <div class="post-card">
+      <h2 class="ticket"><%= post.issue %></h2>
+      <p class="ticket"><%= post.post %></p>
+    </div>
     <% }); %>
     <footer>
       <nav id="bottom-nav">
