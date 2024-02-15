@@ -1,3 +1,5 @@
+//! finally it toke me 3 week's and 4attempt to do this simple project i had to read the novice to ninja node js book *first 100 pages to understand how this work i wasted no time on styling the page
+
 //Express application
 import express from 'express';
 
@@ -13,10 +15,20 @@ app.use(express.static('public'));
 // setting body parser
 app.use(express.urlencoded({ extended: true }));
 
+// initalize an array to store posts
+const posts = [];
+
 //setting rout
 app.all('/', (req, res, next) => {
   if (req.method === 'GET' || req.method === 'POST') {
-    res.render('index.ejs');
+    const postTitle = req.body['post-title'];
+    const postBody = req.body['post-body'];
+
+    const post = { title: postTitle, body: postBody };
+    //adding new post
+    posts.push(post);
+    // rendering the ejs file and the posts
+    res.render('index.ejs', { posts });
   } else {
     next();
   }

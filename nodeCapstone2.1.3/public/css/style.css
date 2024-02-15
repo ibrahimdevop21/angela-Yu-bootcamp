@@ -5,5 +5,103 @@
 }
 
 body {
-  background-color: green;
+  background-color: #f0f8ff; /* AliceBlue - Light blue background */
+  display: grid;
+  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-rows: auto 3fr auto;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #ffa07a; /* LightSalmon - Light coral header background */
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  color: #fff; /* White text color */
+}
+
+nav a {
+  color: #fff; /* White text color for links */
+}
+
+main {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 3fr;
+  padding: 20px;
+  margin-top: 60px; /* Adjusted margin to accommodate the fixed header */
+}
+
+section#left {
+  background-color: #ffb6c1; /* LightPink - Light pink left section background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+  color: #8a2be2; /* BlueViolet - Purple label text color */
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #8a2be2; /* BlueViolet - Purple border color */
+  border-radius: 5px;
+}
+
+button {
+  background-color: #8a2be2; /* BlueViolet - Purple button background color */
+  color: #fff; /* White text color for button */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #da70d6; /* Orchid - Lighter purple on hover */
+}
+
+section#right {
+  background-color: #add8e6; /* LightBlue - Light blue right section background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.post {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #fff; /* Added white border to create a gap between posts */
+  padding-bottom: 10px; /* Added padding-bottom for spacing */
+}
+
+footer {
+  background-color: #f0f8ff; /* AliceBlue - Light blue footer background */
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+svg {
+  fill: #8a2be2; /* BlueViolet - Purple SVG icon fill color */
+}
+
+nav a:hover,
+footer a:hover {
+  text-decoration: underline;
+  color: #da70d6; /* Orchid - Lighter purple on hover for links */
 }
