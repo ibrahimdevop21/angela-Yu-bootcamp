@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog post</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <% if(posts.length > 0) { %> <% posts.forEach(post => { %>
+    <div class="post" id="<%= post.id %>">
+      <h3><%= post.title %></h3>
+      <p><%= post.body %></p>
+      <button class="btn" onclick="editPost('<%= post.id %>')">EDIT</button>
+      <button class="btn" onclick="deletePost('<%= post.id %>')">DELETE</button>
+    </div>
+    <% }); %> <% } else { %>
+    <h1>No new posts yet</h1>
+    <% } %>
+
+    <script>
+      function editPost(postId) {
+        const newTitle = prompt('Enter new title:');
+        const newBody = prompt('Enter new body:');
+        alert(
+          `Post with ID: ${postId} edited. New Title: ${newTitle}, New Body: ${newBody}`
+        );
+        // Add logic to update the post with the newTitle and newBody on the server
+      }
+
+      function deletePost(postId) {
+        const index = posts.findIndex((post) => post.id === postId);
+        if (index !== -1) {
+          posts.splice(index, 1);
+          alert(`Post with ID: ${postId} deleted.`);
+          // Add logic to delete the post with the given postId on the server
+        }
+      }
+    </script>
+  </body>
+</html>

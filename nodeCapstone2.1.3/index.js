@@ -1,44 +1,52 @@
-//! finally it toke me 3 week's and 4attempt to do this simple project i had to read the novice to ninja node js book *first 100 pages to understand how this work i wasted no time on styling the page
-
-//Express application
 import express from 'express';
+import bodyParser from 'body-parser';
 
-//initate express
 const app = express();
 const cfg = {
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || 4000,
 };
 
-//public pathway
-app.use(express.static('public'));
-
-// setting body parser
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
-// initalize an array to store posts
-const posts = [];
+let posts = [];
 
-//setting rout
-app.all('/', (req, res, next) => {
-  if (req.method === 'GET' || req.method === 'POST') {
-    const postTitle = req.body['post-title'];
-    const postBody = req.body['post-body'];
-
-    const post = { title: postTitle, body: postBody };
-    //adding new post
-    posts.push(post);
-    // rendering the ejs file and the posts
-    res.render('index.ejs', { posts });
-  } else {
-    next();
-  }
+app.get('/', (req, res) => {
+  res.render('index.ejs', { posts });
 });
 
-//Server starter
-try {
-  app.listen(cfg.port, () => {
-    console.log(`Server is up and running on http://localhost:${cfg.port}`);
-  });
-} catch (error) {
-  console.error('Error starting the server:', error.message);
+app.get('/submit', (req, res) => {
+  res.render('submit.ejs', { posts });
+});
+
+
+function handleFormSubmission(req, res) {
+  const ptitle = req.body.postTitle;
+  const pbody = req.body.postBody;
+  const postId = createNewId();
+
+  const post = {
+    id: postId,
+    title: ptitle,
+    body: pbody,
+  };
+
+  function createNewId() {
+    return Math.floor(Math.random() * 10000 + 1);
+  }
+
+  posts.push(post); // Adding the post to the posts array
+  console.log(post);
 }
+
+app.post('/submit', (req, res) => {
+  handleFormSubmission(req, res);
+  // Redirect to '/submit' after handling the form submission
+  res.redirect('/submit');
+});
+
+app.listen(cfg.port, () => {
+  console.log(`server is running on http://localhost:${cfg.port}`);
+});
