@@ -1,0 +1,24 @@
+<%- include('partials/header.ejs') %>
+
+<div class="post-grid">
+  <% if (posts.length > 0) { %>
+    <% posts.forEach(post => { %>
+      <div class="post" id="<%= post.id %>">
+        <% if (post.title && post.artic) { %>
+          <h1><%= post.title %></h1>
+          <p><%= post.artic %></p>
+        <% } %>
+        <button class="edit" onclick="window.location.href='/edit/<%= post.id %>'">
+          <i class="fa-regular fa-pen-to-square"> EDIT</i>
+        </button>
+        <button class="delete" onclick="window.location.href='/delete/<%= post.id %>'">
+          <i class="fa-solid fa-trash"> </i>
+        </button>
+      </div>
+    <% }); %>
+  <% } else { %>
+    <h1>No new posts at the moment</h1>
+  <% } %>
+</div>
+
+<%- include('partials/footer.ejs') %>
