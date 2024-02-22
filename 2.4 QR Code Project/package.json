@@ -1,0 +1,26 @@
+{
+  "name": "qr-generatore",
+  "version": "1.0.0",
+  "description": "a simple qr-generatore for practice of using nodeJS and npm",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ibrahimdevop21"
+  },
+  "keywords": [
+    "qr-code",
+    "nodejs",
+    "nod",
+    "learning"
+  ],
+  "author": "ibrahimMohamed",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.2.12",
+    "qr-image": "^3.2.0"
+  }
+}
