@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+
+<form action="/submit" method="post">
+  <label for="fullName">Please provide you'r full name.</label>
+  <input type="text" name="fullName" id="fullName" required />
+  <label for="postTitle">Please provide Article/Post title.</label>
+  <input type="text" name="postTitle" id="postTitle" required />
+  <label for="postBody">Tell us about your thoughts</label>
+  <textarea
+    name="postBody"
+    id="postBody"
+    cols="30"
+    rows="10"
+    required
+  ></textarea>
+  <button type="submit" value="SUBMIT">SUBMIT</button>
+</form>
+
+<%- include("partials/footer.ejs") %>
